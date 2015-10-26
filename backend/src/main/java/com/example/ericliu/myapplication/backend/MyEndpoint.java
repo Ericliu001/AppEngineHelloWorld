@@ -33,4 +33,12 @@ public class MyEndpoint {
         return response;
     }
 
+    @ApiMethod(name = "sayGoodMorning")
+    public MyBean sayGoodMorning(@Named("name") String name) {
+        MyBean response = new MyBean();
+        response.setData("Good morning, " + name + "!");
+
+        return response;
+    }
+
 }
